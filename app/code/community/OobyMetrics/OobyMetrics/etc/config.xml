@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * oobyMetrics
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0), a
+ * copy of which is available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/osl-3.0.php
+ *
+ * @package    OobyMetrics_OobyMetrics
+ * @author     oobyMetrics <code@oobymetrics.com>
+ * @copyright  2017 oobyMetrics
+ * @license    https://opensource.org/licenses/osl-3.0.php OSL 3.0
+ */
+-->
+<config>
+    <modules>
+        <OobyMetrics_OobyMetrics>
+            <version>1.0.0</version>
+        </OobyMetrics_OobyMetrics>
+    </modules>
+	<global>
+		<models>
+			<oobymetrics>
+				<class>OobyMetrics_OobyMetrics_Model</class>
+			</oobymetrics>
+		</models>
+		<blocks>
+			<oobymetrics>
+				<class>OobyMetrics_OobyMetrics_Block</class>
+			</oobymetrics>
+            <googleanalytics>
+                <rewrite>
+                    <ga>OobyMetrics_OobyMetrics_Block_GoogleAnalytics_Ga</ga>
+                </rewrite>
+            </googleanalytics>
+		</blocks>
+		<helpers>
+			<oobymetrics>
+				<class>OobyMetrics_OobyMetrics_Helper</class>
+			</oobymetrics>
+		</helpers>
+	</global>
+    <frontend>
+		<layout>
+			<updates>
+				<oobymetrics>
+					<file>oobymetrics.xml</file>
+				</oobymetrics>
+			</updates>
+		</layout>
+    </frontend>
+    <default>
+        <oobymetrics>
+            <config>
+                <account_code></account_code>
+                <integration_method>0</integration_method>
+            </config>
+        </oobymetrics>
+    </default>
+</config>

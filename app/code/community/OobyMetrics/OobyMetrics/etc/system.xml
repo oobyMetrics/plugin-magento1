@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * oobyMetrics
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0), a
+ * copy of which is available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/osl-3.0.php
+ *
+ * @package    OobyMetrics_OobyMetrics
+ * @author     oobyMetrics <code@oobymetrics.com>
+ * @copyright  2017 oobyMetrics
+ * @license    https://opensource.org/licenses/osl-3.0.php OSL 3.0
+ */
+-->
+<config>
+    <sections>
+        <oobymetrics translate="label" module="oobymetrics">
+            <label>oobyMetrics</label>
+            <tab>service</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>150</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <config translate="label">
+                    <label>oobyMetrics Tracking</label>
+                    <comment><![CDATA[
+                        <a href="https://www.oobymetrics.com/"><img src="https://admin.oobymetrics.com/images/logo/logo_txt-dark_bg-transparent_336x54.svg" alt="oobyMetrics Logo" style="margin-left:-10px; max-height:30px;"></a>
+                        <p>To sign up for an account or for support, please visit <a href="https://www.oobymetrics.com/plugin/magento1">oobymetrics.com/plugin/magento1</a>.</p>
+                        <p style="border-bottom:solid 1px #eee; padding:0 0 10px 0; margin:0 0 15px 0;"></p>
+                    ]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <integration_method translate="label">
+                            <label>Integration Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>oobymetrics/system_config_source_integrationmethod</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integration_method>
+                        <account_code translate="label comment">
+                            <label>Account Code</label>
+                            <comment><![CDATA[Starts with <code>M</code> and is 7 characters]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </account_code>
+                    </fields>
+                </config>
+            </groups>
+        </oobymetrics>
+    </sections>
+</config>

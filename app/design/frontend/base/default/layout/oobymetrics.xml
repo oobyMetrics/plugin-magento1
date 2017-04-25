@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * oobyMetrics
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0), a
+ * copy of which is available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/osl-3.0.php
+ *
+ * @package    OobyMetrics_OobyMetrics
+ * @author     oobyMetrics <code@oobymetrics.com>
+ * @copyright  2017 oobyMetrics
+ * @license    https://opensource.org/licenses/osl-3.0.php OSL 3.0
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="head" after="google_analytics">
+            <block type="core/template" name="oobymetrics_tracking" template="oobymetrics/tracking.phtml" />
+        </reference>
+    </default>
+    <checkout_onepage_success>
+        <reference name="before_body_end">
+            <block type="core/template" name="oobymetrics_checkout_onepage_success" template="oobymetrics/checkout/onepage/success.phtml"/>
+        </reference>
+    </checkout_onepage_success>
+    <checkout_multishipping_success>
+        <reference name="before_body_end">
+            <block type="core/template" name="oobymetrics_checkout_multishipping_success" template="oobymetrics/checkout/multishipping/success.phtml"/>
+        </reference>
+    </checkout_multishipping_success>
+</layout>

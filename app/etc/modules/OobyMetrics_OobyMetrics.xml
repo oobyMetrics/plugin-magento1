@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * oobyMetrics
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0), a
+ * copy of which is available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/osl-3.0.php
+ *
+ * @package    OobyMetrics_OobyMetrics
+ * @author     oobyMetrics <code@oobymetrics.com>
+ * @copyright  2017 oobyMetrics
+ * @license    https://opensource.org/licenses/osl-3.0.php OSL 3.0
+ */
+-->
+<config>
+    <modules>
+        <OobyMetrics_OobyMetrics>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_GoogleAnalytics/>
+            </depends>
+        </OobyMetrics_OobyMetrics>
+    </modules>
+</config>

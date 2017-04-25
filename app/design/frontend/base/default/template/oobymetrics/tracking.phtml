@@ -1,0 +1,40 @@
+<?php
+/**
+ * oobyMetrics
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0), a
+ * copy of which is available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/osl-3.0.php
+ *
+ * @package    OobyMetrics_OobyMetrics
+ * @author     oobyMetrics <code@oobymetrics.com>
+ * @copyright  2017 oobyMetrics
+ * @license    https://opensource.org/licenses/osl-3.0.php OSL 3.0
+ */
+
+$_helper = $this->helper('oobymetrics');
+?>
+<?php if(!$this->helper('core/cookie')->isUserNotAllowSaveCookie()): ?>
+    <?php if($_helper->isGoogleAnalyticsIntegrationMethod()): ?>
+        <!-- oobyMetrics -->
+        <script>
+        (function(w,d,s,u,o,m,a,g,h,x,y,z){g='GoogleAnalytics',h='sendHitTask';w[m]=w[m]||{sv:1,ev:[],co:d.cookie};
+        w[o]=function(t,d){w[m].ev.push([t,d,1*new Date])};z=d.createElement(s);z.src=u+'?a='+a+'&p='+g;z.async=1;y=
+        d.getElementsByTagName(s)[0];y.parentNode.insertBefore(z,y);x=w[w[g+'Object']||'ga'];'function'===typeof x&&
+        x('provide',m,function(x,e){e=x.get(h);x.set(h,function(x){e(x);w[o]('plugin:'+g,x.get('hitPayload'))})})})
+        (window,document,'script','//ooby.me/trics.js','ooby','oobyMetrics','<?php echo $this->jsQuoteEscape($_helper->getAccountCode()); ?>');
+        </script>
+        <!-- End oobyMetrics -->
+    <?php elseif($_helper->isStandaloneIntegrationMethod()): ?>
+        <!-- oobyMetrics -->
+        <script>
+        (function(w,d,s,u,o,m,a,y,z){w[m]=w[m]||{sv:1,ev:[],co:d.cookie};w[o]=function(t,d){w[m].ev.push([t,d,1*new Date])};
+        z=d.createElement(s);z.src=u+'?a='+a;z.async=1;y=d.getElementsByTagName(s)[0];y.parentNode.insertBefore(z,y)})
+        (window,document,'script','//ooby.me/trics.js','ooby','oobyMetrics','<?php echo $this->jsQuoteEscape($_helper->getAccountCode()); ?>');
+        ooby('pageview');
+        </script>
+        <!-- End oobyMetrics -->
+    <?php endif; ?>
+<?php endif;
